@@ -1,3 +1,4 @@
+@import url();
 *{
     margin: 0;
     padding: 0;
@@ -17,14 +18,79 @@
     position:relative;
   }
 
+  #map{
+    width:100%;
+    height:100vh;
+  }
+
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
- .map{
+ /* .map img{
     display: flex;
-    width: 280px;
+    width: 100%;
+    height: 50%;
     border-radius: 20px;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
+
+.map-search {
+  position: absolute;
+  top:5%;
+  left: 35%;
+  box-shadow: 8px 10px 10px gray;
+  border-color: black;
+  border: 1px solid #000 ;
+  z-index: 999;
+  
+  
+}
+.map-search input {
+  
+  
+  box-shadow: #fefefe;
+  border-color: black;
+  border: 1px solid #bbb ;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 3px;
+}
+
+.map-search input ::placeholder {
+  color: #bbb;
+}
+
+
+.map-detail-box {
+  position: absolute;
+  display: flex;
+  display: none;
+  transition: all 0.2s cubic-bezier(1,.14,.24,.98); /* 애니메이션 효과 https://cubic-bezier.com/ */
+}
+
+.detail-title{
+  border-bottom:  1px solid #bbb;
+}
+
+.detail-title h2{
+  font-size: 10px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.detail-info > div > h3{
+
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom:  1px solid #ccc;
+}
+.detail-info > div > h3:last-child{
+  border-bottom: 0;
+}
+.detail-text>div{
+  border: 1px solid;
+}
